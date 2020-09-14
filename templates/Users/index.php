@@ -25,11 +25,11 @@
                 <?php foreach ($users as $user): ?>
                 <tr>
                     <td><?= $this->Number->format($user->id) ?></td>
-                    <td><?= h($user->usuario) ?></td>
-                    <td><?= h($user->email) ?></td>
+                    <td><?= h(strtoupper($user->usuario)) ?></td>
+                    <td><?= h(strtoupper($user->email)) ?></td>
                     <td><?= h($user->telefone) ?></td>
                     <td><?= h($user->cep) ?></td>
-                    <td><?= h($user->endereco)  ?></td>
+                    <td><?= h(strtoupper($user->endereco))  ?></td>
                     <td><?= h($user->senha) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
